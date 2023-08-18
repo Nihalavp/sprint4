@@ -1,0 +1,35 @@
+h1{
+    color:white;
+    background-color: black;
+}
+#head{
+    color:aqua;
+    background-color: beige;
+}
+.h11{
+    color:rgb(43, 255, 0);
+    background-color: rgb(151, 151, 24);
+}
+div p{
+    border:2px solid yellow;
+}
+a{
+    text-decoration: none;
+    color:blue;
+}
+a:hover{
+    color:blueviolet;
+}
+a:visited{
+    color:yellow;
+
+}
+ul li::first-child{
+color:red;
+}
+ul li::first-letter{
+    font-size:large;
+}
+ul li::after {
+    content: 🥰;
+}

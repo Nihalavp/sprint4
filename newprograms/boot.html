@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap-5.0.2-dist/css/bootstrap.css">
+<link rel="stylesheet" href="bootstrap/bootstrap-5.0.2-dist/js/bootstrap.js">
+<style>
+
+body {
+      padding-top: 60px; /* Add spacing for fixed top navbar */
+    }
+    .section {
+      padding: 80px 0;
+    }
+    .text-center {
+      text-align: center;
+    }
+    /* Custom styles for hero section */
+    .hero {
+      background-image: url(images/1737168.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+    .cta-btn {
+      margin-top: 20px;
+    }
+    .testimonials {
+      padding: 50px 0;
+    }
+    .testimonial-card {
+      border: none;
+      margin: 0 15px;
+    }
+    .cta-section {
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 100px 0;
+    }
+    .cta-heading {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .cta-description {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .cta-button {
+      padding: 10px 30px;
+      font-size: 18px;
+    }
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 40px 0;
+    }
+    .footer-logo {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+    .social-icons li {
+      margin-right: 10px;
+    }
+    @media (max-width: 768px) {
+      .footer-logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    }
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: none;
+      color: #ffc107;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="#"><h2>BOOTSTRAP</h2></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <h1 class="display-4">Welcome to Your Website</h1>
+        <p class="lead">Discover amazing things with us.</p>
+        <a href="#" class="btn btn-primary cta-btn">Get Started</a>
+      </section>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card feature-box">
+              <div class="card-body">
+                <i class="bi bi-speedometer2"></i>
+                <h5 class="card-title">Fast Performance</h5>
+                <p class="card-text">Experience lightning-fast speeds with our optimized system.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card feature-box">
+              <div class="card-body">
+                <i class="bi bi-puzzle"></i>
+                <h5 class="card-title">Flexible Options</h5>
+                <p class="card-text">Choose from a variety of options to customize your experience.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card feature-box">
+              <div class="card-body">
+                <i class="bi bi-headset"></i>
+                <h5 class="card-title">24/7 Support</h5>
+                <p class="card-text">Our dedicated support team is available around the clock to assist you.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <section class="testimonials">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card testimonial-card">
+                <img src="images/beautiful-woman-avatar-character-icon-free-vector.jpg" height="250px" width="30px" class="card-img-top" alt="Profile Picture 1">
+                <div class="card-body">
+                  <blockquote class="blockquote">
+                    <p class="mb-0">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                    <footer class="blockquote-footer">John Doe</footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card testimonial-card">
+                <img src="images/bad786dfe4f227555be6fa2484b0b9a3.jpg" height="250px" width="30px" class="card-img-top" alt="Profile Picture 2">
+                <div class="card-body">
+                  <blockquote class="blockquote">
+                    <p class="mb-0">"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                    <footer class="blockquote-footer">Jane Smith</footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="cta-section">
+        <div class="container">
+          <h2 class="cta-heading">Join Us Today!</h2>
+          <p class="cta-description">Experience the best services and solutions for your needs.</p>
+          <a href="#" class="btn btn-primary cta-button">Get Started</a>
+        </div>
+      </section>
+
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subject" placeholder="Enter the subject">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h4 class="footer-logo">BOOTSTRAP</h4>
+              <p>Your tagline or brief description here.</p>
+              <ul class="social-icons">
+                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                <!-- Add more social media links/icons as needed -->
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Contact Us</h4>
+              <ul class="footer-links">
+                <li><a href="tel:123-456-7890">123-456-7890</a></li>
+                <li><a href="mailto:info@example.com">info@example.com</a></li>
+                <li><a href="#">123 Street, City, Country</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4>Quick Links</h4>
+              <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <p class="text-center">&copy; 2023 Your Company. All rights reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:grid;
+            grid-template-columns: 200px auto auto ;
+            grid-template-rows: 200px 200px;
+            grid-gap :20px 100px;
+            align-content: end;
+            justify-content:center;
+        }
+        .item1{
+            /*grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;*/
+grid-area:2/2/3/4;
+background-color:aquamarine;
+        } 
+        .container div{
+border: 1px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1"><img src="fb_logo.png" height="100px" width="50px"></div>
+        <div class="item2"><img src="fb_logo.png" height="100px" width="50px"></div>
+        <div class="item3"><img src="fb_logo.png" height="100px" width="50px"></div>
+        <div class="item4"><img src="fb_logo.png" height="100px" width="50px"></div>
+        <div class="item5"><img src="fb_logo.png" height="100px" width="50px"></div>
+    
+
+    </div>
+</body>
+
+</html>

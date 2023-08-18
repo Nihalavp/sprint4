@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns:1fr;
+        display: grid;
+        min-height: 100vh;
+
+    }
+    .header{
+        color:white;
+        padding: 20px;
+        background-color: rgb(233, 122, 122);
+
+    }
+    .title{
+        margin: 0;
+    }
+    .nav{
+        background-color: aliceblue;
+        padding: 10px;
+        height: 100px;
+    }
+.navlist{
+    
+    list-style-type:none ;
+    margin: right 0px; 
+}    
+.navlist li{
+    display: inline;
+    margin: 0%;
+}
+.navlist li:last-child{
+    margin-right: 0;
+
+}
+.navlist li a{
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(14, 1, 1);
+}
+.main{
+    padding: 20px;
+}
+.footer{
+    background-color: brown;
+    color: #fff;
+}
+    
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title"css grid></h1>
+
+    </header>
+    <nav class="nav">
+        <ul class="navlist"> 
+            <li><a href="">home</a></li>
+            <li><a href="">contact</a></li>
+            <li><a href="">about us</a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque architecto, dicta ipsam quibusdam laudantium vitae tempora minima sint veniam quisquam aperiam sunt minus ex nihil ipsa ut obcaecati quasi repellat.</p>
+    </main>
+    <footer class="footer">
+        ********************************************************2023 css grid********************************************************
+    </footer>
+</body>
+</html>

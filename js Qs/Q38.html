@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countNotes(amount) {
+    const denominations = [500, 100, 50, 20, 10, 5, 2, 1];
+    const notesCount = {};
+
+    for (const denomination of denominations) {
+        const count = Math.floor(amount / denomination);
+        if (count > 0) {
+            notesCount[denomination] = count;
+            amount %= denomination;
+        }
+    }
+
+    return notesCount;
+}
+
+const inputAmount = parseInt(prompt("Enter the amount:"));
+const notes = countNotes(inputAmount);
+
+console.log("Total number of notes:");
+for (const denomination in notes) {
+    console.log(`${denomination}: ${notes[denomination]}`);
+}
+
+    </script>
+</body>
+</html>

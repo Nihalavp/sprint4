@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Carousel</title>
+</head>
+<body>
+    <button id="prevButton">Previous</button>
+    <img id="image" src="image1.jpg" alt="Image">
+    <button id="nextButton">Next</button>
+    
+    <script>
+        const images = ["image1.jpg", "image2.jpg", "image3.jpg"];
+        let currentIndex = 0;
+        const imageElement = document.getElementById('image');
+        
+        function showImage(index) {
+            imageElement.src = images[index];
+        }
+        
+        document.getElementById('prevButton').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        });
+        
+        document.getElementById('nextButton').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        });
+        
+        showImage(currentIndex);
+    </script>
+</body>
+</html>

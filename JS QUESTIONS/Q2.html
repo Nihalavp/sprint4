@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String Length Calculator</h1>
+    <label for="inputString">Enter a string:</label>
+    <input type="text" id="inputString">
+    <button onclick="calculateLength()">Calculate Length</button>
+    <div id="result"></div>
+
+    <script>
+        function calculateLength() {
+    // Get the input string from the input field
+    const inputString = document.getElementById("inputString").value;
+
+    // Calculate the length of the input string
+    const length = inputString.length;
+
+    // Display the result in the HTML div
+    const resultDiv = document.getElementById("result");
+    resultDiv.textContent = `Length of the string: ${length}`;
+}
+
+    </script>
+</body>
+</html>

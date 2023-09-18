@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        .new{
+            height: 200px;
+            width: 200px;
+            color: aqua;
+            border: 1px solid black;
+
+        }
+        </style>
+    </head>
+    <body>
+        <button id="button">
+            show
+        </button>
+        <button id="click">click</button>
+        <p id="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam,
+            rerum magnam
+            quos minus distinctio vitae.</p>
+            <script>
+                var paragraph=document.getElementById('para')
+                var button=document.getElementById('button')
+                var click=document.getElementById('click')
+                function ChangeText(){
+                  paragraph.style.color="blue" 
+                  paragraph.innerHTML="<h2>content changed</h2>"
+                }
+                button.addEventListener('click',ChangeText)
+                function mouseOver(){
+                    paragraph.style.backgroundColor='yellow'
+                }
+                function mouseOut(){
+                    paragraph.style.backgroundColor='red'
+
+                }
+                
+                paragraph.addEventListener('mouseover',mouseOver)
+                paragraph.addEventListener('mouseout',mouseOut)
+
+                function toggleEventListener()
+{
+if(paragraph.classList.contains("new")){
+paragraph.classList.remove('new')
+click.removeEventListener('click',handleclick)
+}
+else{
+    paragraph.classList.add('new')
+    click.addEventListener('click',handleclick)
+}
+}
+function handleclick(){
+    alert('hello')
+}
+
+
+click.addEventListener('click',handleclick)
+var togglebutton= document.createElement('button')
+togglebutton.innerHTML='togglebutton'
+togglebutton.addEventListener('click',toggleEventListener)
+document.body.appendChild(togglebutton)
+</script>
+    </body>
+</html>

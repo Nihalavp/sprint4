@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>// Input
+        const inputString = prompt("Enter a string:");
+        const start = parseInt(prompt("Enter the starting value:"));
+        const end = parseInt(prompt("Enter the ending value:"));
+        
+        let substring = "";
+        
+        // Check if the input indices are valid
+        if (start >= 0 && end <= inputString.length && start <= end) {
+            for (let i = start; i < end; i++) {
+                substring += inputString[i];
+            }
+        
+            console.log(`Substring from index ${start} to ${end - 1}: ${substring}`);
+        } else {
+            console.log("Invalid input indices.");
+        }
+        </script>
+</body>
+</html>

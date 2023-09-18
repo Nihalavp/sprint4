@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var button=document.createElement('button')
+        button.id="date-button"
+        button.innerHTML="show current date"
+        button.addEventListener('click',function(){
+            var currentDate=new Date()
+            var dateString=currentDate.toLocaleDateString()
+            alert('current date '+ dateString)
+        })
+        document.body.appendChild(button)
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function removeCharacterFromString(inputString, charToRemove) {
+    return inputString.split(charToRemove).join('');
+}
+
+const inputString = prompt("Enter a string:");
+const charToRemove = prompt("Enter a character to remove:");
+const resultString = removeCharacterFromString(inputString, charToRemove);
+console.log(`String after removing '${charToRemove}': ${resultString}`);
+
+    </script>
+</body>
+</html>

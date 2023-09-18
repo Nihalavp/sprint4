@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        /* Style for the countdown timer */
+        #timer {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Countdown Timer</h2>
+    <button id="startButton">Start Timer</button>
+    <div id="timer">00:00</div>
+    <div id="message"></div>
+
+    <script>
+        let countdown;
+        const timerDisplay = document.getElementById('timer');
+        const startButton = document.getElementById('startButton');
+        const message = document.getElementById('message');
+
+        function startTimer(seconds) {
+            clearInterval(countdown);
+
+            const now = Date.now();
+            const then = now + seconds * 1000;
+
+            displayTimeLeft(seconds);
+
+            countdown = setInterval(() => {
+                const secondsLeft = Math.round((then - Date.now()) / 1000);
+
+                if (secondsLeft < 0) {
+                    clearInterval(countdown);
+                    displayMessage("Time's up!");
+                    return;
+                }
+
+                displayTimeLeft(secondsLeft);
+            }, 1000);
+        }
+
+        function displayTimeLeft(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = seconds % 60;
+            const display = `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+            timerDisplay.textContent = display;
+        }
+
+        function displayMessage(msg) {
+            message.textContent = msg;
+        }
+
+        startButton.addEventListener('click', () => {
+            startTimer(120); // Set the countdown time in seconds (e.g., 120 seconds = 2 minutes)
+        });
+    </script>
+</body>
+</html>

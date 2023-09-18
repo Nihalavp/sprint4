@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ol id="myList">
+        <li>mango</li>
+        <li>orange</li>
+        <li>pineapple</li>
+        <li>grape</li>
+    </ol>
+    <button id="btn">count</button>
+
+    <p id="countResult">Number of list items: </p>
+
+    <script>
+
+function countListItems() {
+            const myList = document.getElementById('myList');
+            const countResult = document.getElementById('countResult');
+            const listItemCount = myList.getElementsByTagName('li').length;
+
+            countResult.textContent = 'Number of list items: ' + listItemCount;
+        }
+
+        // Add a click event listener to the button
+        const countButton = document.getElementById('btn');
+        countButton.addEventListener('click', countListItems);
+    </script>
+
+
+
+    </script>
+</body>
+</html>

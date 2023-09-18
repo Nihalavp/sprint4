@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .changeDiv{
+            height:200px;
+            width:200px;
+            border:1px solid black;
+            color:aqua;
+        }
+        #colorSelect{
+            height: 100px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="changeDiv"><select name="se" id="colorSelect">
+        <option id="op1" value="red">red</option>
+        <option id="op2" value="blue">blue</option>
+    </select>
+    <!-- <select id="colorSelect">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+      </select> -->
+      
+      </div>
+      
+    <script>
+        // var div=document.getElementById('div')
+        // var select=document.getElementById('sel')
+        // div.style.backgroundColor=select.value
+        // Get references to the select and div elements
+var colorSelect = document.getElementById("colorSelect");
+var changeDiv = document.getElementById("changeDiv");
+
+  var selectedColor = colorSelect.value;
+  changeDiv.style.backgroundColor = selectedColor;
+
+
+    </script>
+</body>
+</html>

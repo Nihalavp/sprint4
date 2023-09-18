@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Image element -->
+    <img id="myImage" src="images/download (2).jpg" alt="Image 1">
+
+    <!-- Button to change the image source -->
+    <button id="changeImageBtn">Change Image</button>
+<script>
+    
+        // Get references to the image and button elements
+        const imageElement = document.getElementById('myImage');
+        const changeImageButton = document.getElementById('changeImageBtn');
+
+        // Function to change the image source
+        function changeImage() {
+            // Check the current source and change it to the new image source
+            if (imageElement.src.endsWith('images/download (2).jpg')) {
+                imageElement.src = 'download.jpg'; // Change to your new image source
+                imageElement.alt = 'Image 2'; // Change alt text as needed
+            } else {
+                imageElement.src = 'download (2).jpg'; // Change back to the original image source
+                imageElement.alt = 'Image 1'; // Change alt text as needed
+            }
+        }
+
+        // Add a click event listener to the button
+        changeImageButton.addEventListener('click', changeImage);
+
+  </script>
+</body>
+</html>

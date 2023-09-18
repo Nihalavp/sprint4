@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const n = parseInt(prompt("Enter an integer:"));
+
+if (n % 2 === 1) {
+    document.write("Weird");
+} else if (n % 2 === 0 && n >= 2 && n <= 5) {
+    document.write("Not Weird");
+} else if (n % 2 === 0 && n >= 6 && n <= 20) {
+    document.write("Weird");
+} else if (n % 2 === 0 && n > 20) {
+    document.write("Not Weird");
+}
+
+    </script>
+</body>
+</html>

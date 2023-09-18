@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+</head>
+<body>
+    <h2>Quiz</h2>
+    <form id="quizForm">
+        <p>What is the capital of France?</p>
+        <label>
+            <input type="radio" name="question1" value="paris"> Paris
+        </label><br>
+        <label>
+            <input type="radio" name="question1" value="london"> London
+        </label><br>
+        <label>
+            <input type="radio" name="question1" value="berlin"> Berlin
+        </label><br>
+        
+        <p>What is 2 + 2?</p>
+        <label>
+            <input type="radio" name="question2" value="3"> 3
+        </label><br>
+        <label>
+            <input type="radio" name="question2" value="4"> 4
+        </label><br>
+        <label>
+            <input type="radio" name="question2" value="5"> 5
+        </label><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <p id="quizResult"></p>
+
+    <script>
+        const quizForm = document.getElementById('quizForm');
+        const quizResult = document.getElementById('quizResult');
+
+        quizForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const answers = {
+                question1: "paris",
+                question2: "4",
+            };
+
+            const userAnswers = {
+                question1: document.querySelector('input[name="question1"]:checked').value,
+                question2: document.querySelector('input[name="question2"]:checked').value,
+            };
+
+            let score = 0;
+
+            for (const question in answers) {
+                if (userAnswers[question] === answers[question]) {
+                    score++;
+                }
+            }
+
+            quizResult.textContent = `Your score: ${score} out of ${Object.keys(answers).length}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Like Button</title>
+</head>
+<body>
+    <button id="likeButton">Like</button>
+    <span id="likeCount">0</span>
+    
+    <script>
+        const likeButton = document.getElementById('likeButton');
+        const likeCount = document.getElementById('likeCount');
+        let count = 0;
+        
+        likeButton.addEventListener('click', () => {
+            count++;
+            likeCount.textContent = count;
+            likeButton.style.backgroundColor = 'red';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Select</title>
+</head>
+<body>
+    <select id="selectOption">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+    <p id="selectedOption"></p>
+    
+    <script>
+        const selectOption = document.getElementById('selectOption');
+        const selectedOption = document.getElementById('selectedOption');
+        
+        selectOption.addEventListener('change', () => {
+            selectedOption.textContent = `Selected option: ${selectOption.value}`;
+        });
+    </script>
+</body>
+</html>

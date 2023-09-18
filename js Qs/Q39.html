@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkTriangleType(side1, side2, side3) {
+    if (side1 === side2 && side2 === side3) {
+        return "Equilateral";
+    } else if (side1 === side2 || side1 === side3 || side2 === side3) {
+        return "Isosceles";
+    } else {
+        return "Scalene";
+    }
+}
+
+const sideA = parseFloat(prompt("Enter the length of side A:"));
+const sideB = parseFloat(prompt("Enter the length of side B:"));
+const sideC = parseFloat(prompt("Enter the length of side C:"));
+
+if (sideA <= 0 || sideB <= 0 || sideC <= 0) {
+    console.log("Invalid side lengths. Please enter positive numbers.");
+} else if (sideA + sideB <= sideC || sideA + sideC <= sideB || sideB + sideC <= sideA) {
+    console.log("These side lengths cannot form a triangle.");
+} else {
+    const triangleType = checkTriangleType(sideA, sideB, sideC);
+    console.log(`This is a ${triangleType} triangle.`);
+}
+
+    </script>
+</body>
+</html>

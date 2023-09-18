@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">hello guys</h1>
+<p title="para" id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+<ul id="list">
+    <li>hai</li>
+    <li>hello</li>
+    <li>good morning</li>
+</ul>
+
+<div id="div1">
+    <h1 id="heading">haii</h1>
+    <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit perferendis asperiores nemo nobis provident doloribus corrupti quisquam ipsum nam natus, fugiat quaerat dignissimos officiis r</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim unde</p>
+<button onclick="change()">change</button>
+<input type="text" id="input1" value="akhil" onchange="show()">
+
+    <script>
+
+        var paragraph=document.getElementsByTagName('p')
+
+        console.log(paragraph)
+        var para=document.getElementsByClassName('para')
+        console.log(para)
+        var div=document.querySelector("div1")
+        console.log(div)
+        var paara=document.querySelectorAll(".para")
+        console.log(paara)
+
+        function change(){
+            var head=document.getElementById("heading")
+            console.log(head.innerHTML)
+            head.innerHTML="welcome"
+        }
+
+        function show(){
+            var input1=document.querySelector("#input1")
+            console.log(input1.value)
+        }
+// var h=document.getElementById('heading')
+// console.log(h)
+// console.log("node type",h.nodeType)
+// console.log("node Name",h.nodeName)
+// console.log("node value",h.nodeValue)
+// var p=document.getElementById('para1')
+// var textnode=p.firstChild
+// console.log(textnode)
+// console.log("node type",textnode.nodeType)
+// console.log("node Name",textnode.nodeName)
+// console.log("node value",textnode.nodeValue)
+
+// console.log(p)
+// console.log("node type",p.nodeType)
+// console.log("node Name",p.nodeName)
+// console.log("node value",p.nodeValue)
+// var listelement=document.getElementById('list')
+// console.log(listelement)
+// console.log("node type",listelement.nodeType)
+// console.log("node Name",listelement.nodeName)
+// console.log("node value",listelement.nodeValue)
+// var children=listelement.children
+// console.log('child element',children)
+// console.log(children[0].firstChild)
+// console.log(children[0].parentElement)
+// console.log(children[0].nextSibling)
+//     </script>
+</body>
+</html>

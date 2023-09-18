@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findSecondLargest(arr) {
+    if (arr.length < 2) {
+        return "Array should have at least two elements";
+    }
+
+   
+    arr.sort(function(a, b) {
+        return b - a;
+    });
+
+    
+    return arr[1];
+}
+
+const array = [10, 20, 77, 1, 9, 80];
+const secondLargest = findSecondLargest(array);
+console.log("The second largest element is:", secondLargest);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Picker</title>
+</head>
+<body>
+    <label for="colorPicker">Choose a Color:</label>
+    <input type="color" id="colorPicker">
+    <div id="colorDisplay" style="width: 100px; height: 100px;"></div>
+
+    <script>
+        const colorPicker = document.getElementById('colorPicker');
+        const colorDisplay = document.getElementById('colorDisplay');
+
+        colorPicker.addEventListener('input', () => {
+            const selectedColor = colorPicker.value;
+            colorDisplay.style.backgroundColor = selectedColor;
+        });
+    </script>
+</body>
+</html>

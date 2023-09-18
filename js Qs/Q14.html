@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPrime(number) {
+    if (number <= 1) {
+        return false;
+    }
+    if (number <= 3) {
+        return true;
+    }
+    if (number % 2 === 0 || number % 3 === 0) {
+        return false;
+    }
+    let i = 5;
+    while (i * i <= number) {
+        if (number % i === 0 || number % (i + 2) === 0) {
+            return false;
+        }
+        i += 6;
+    }
+    return true;
+}
+
+function sumOfPrimesInRange(start, end) {
+    let sum = 0;
+    for (let number = start; number <= end; number++) {
+        if (isPrime(number)) {
+            sum += number;
+        }
+    }
+    return sum;
+}
+
+const startRange = 1;
+const endRange = 100;
+const primeSum = sumOfPrimesInRange(startRange, endRange);
+console.log(`Sum of prime numbers from ${startRange} to ${endRange}: ${primeSum}`);
+
+    </script>
+</body>
+</html>

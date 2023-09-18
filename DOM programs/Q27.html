@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Progress Bar</title>
+</head>
+<body>
+    <div id="progressBar"></div>
+    <div id="timer">10</div>
+
+    <script>
+        const progressBar = document.getElementById('progressBar');
+        const timerElement = document.getElementById('timer');
+
+        let timeLeft = 10;
+        const totalTime = 10;
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+            progressBar.style.width = `${((totalTime - timeLeft) / totalTime) * 100}%`;
+
+            if (timeLeft === 0) {
+                clearInterval(timer);
+                timerElement.textContent = 'Time is up!';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

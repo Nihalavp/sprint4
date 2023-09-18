@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getDaysInMonth(month, year) {
+    return new Date(year, month, 0).getDate();
+}
+
+const inputMonth = parseInt(prompt("Input a month number:"));
+const inputYear = parseInt(prompt("Input a year:"));
+
+const monthNames = [
+    "January", "February", "March", "April",
+    "May", "June", "July", "August",
+    "September", "October", "November", "December"
+];
+
+const daysInMonth = getDaysInMonth(inputMonth, inputYear);
+
+if (daysInMonth === 28) {
+    console.log(`${monthNames[inputMonth - 1]} ${inputYear} has 28 days.`);
+} else {
+    console.log(`${monthNames[inputMonth - 1]} ${inputYear} has ${daysInMonth} days.`);
+}
+
+    </script>
+</body>
+</html>

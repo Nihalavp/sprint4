@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="frm" id="dataForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span id="span1"></span>
+        <br>
+
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" > <span id="span2"></span><br>
+
+        <label for="subject">Subject:</label>
+        <input type="subject" id="subject" name="subject"> <span id="span3"></span><br>
+
+        <label for="place">Place:</label>
+        <input type="place" id="place" name="place"> <span id="span4"></span><br>
+
+       <button type="submit" id="btn" onclick="send()">Submit</button>
+<div id="result"></div>
+
+       <script>
+        
+        function send(){
+        var Name=document.getElementById('name').value
+        var Age=document.getElementById('age').value
+        var Subject=document.getElementById('subject').value
+        var Place=document.getElementById('place').value
+        var  Button=document.getElementById('btn')
+
+        var noname=document.getElementById('span1')
+        var noage=document.getElementById('span2')
+        var nosubject=document.getElementById('span3')
+        var noplace=document.getElementById('span4')
+
+        if(Name===""){
+            noname.innerHTML="enter a value"
+        }
+        else{
+            noname.innerHTML=""
+        }
+        if(Age===""){
+            noage.innerHTML="enter a value"
+        }
+        else{
+            noage.innerHTML=""
+        }
+        if(Subject===""){
+            nosubject.innerHTML="enter a value"
+        }
+        else{
+            nosubject.innerHTML=""
+        }
+        if(Place===""){
+            noPlace.innerHTML="enter a value"
+        }
+        else{
+noplace.innerHTML=""
+        }
+        Button.addEventListener('submit',send)
+
+            const resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = `<p>Name: ${Name}</p><p>Age: ${Age}</p>
+    <p>Subject:${Subject}</p><p>Place:${Place}</>
+    
+    `;
+
+        }
+       </script>
+</body>
+</html>

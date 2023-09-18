@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        hidden {
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Toggle</button>
+    <div id="hiddenElement" class="hidden">
+        <p>This is a hidden element.</p>
+    </div>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        var toggleButton = document.getElementById('toggleButton');
+        var hiddenElement = document.getElementById('hiddenElement');
+    
+        toggleButton.addEventListener('click', function () {
+            if (hiddenElement.style.display === 'none' || hiddenElement.style.display === '') {
+                hiddenElement.style.display = 'block';
+            } else {
+                hiddenElement.style.display = 'none';
+            }
+        });
+    });</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Load More Button</title>
+</head>
+<body>
+    <ul id="contentList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="loadMoreButton" onclick="loadMore()">Load More</button>
+
+    <script>
+        let page = 1;
+
+        function loadMore() {
+            page++;
+            const contentList = document.getElementById('contentList');
+            const newItems = document.createElement('ul');
+             for (let i = 1; i <= 3; i++) {
+                const listItem = document.createElement('li');
+                listItem.textContent = `Item ${page * 3 - 3 + i}`;
+                newItems.appendChild(listItem);
+            }
+
+            contentList.appendChild(newItems);
+        }
+    </script>
+</body>
+</html>

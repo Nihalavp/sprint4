@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+     
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" name="frm" id="dataForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br>
+
+        <label for="subject">Subject:</label>
+        <input type="subject" id="subject" name="subject" required><br>
+
+        <label for="place">Place:</label>
+        <input type="place" id="place" name="place" required><br>
+
+       <button type="submit">Submit</button>
+    
+    </form>
+    <div id="tableContainer"></div>
+
+    <script>
+        
+        const dataForm = document.getElementById('dataForm');
+        const tableContainer = document.getElementById('tableContainer');
+
+  // Event listener for form submission
+  dataForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const subject = document.getElementById('subject').value;
+            const age = document.getElementById('age').value;
+            const place = document.getElementById('place').value;
+
+
+            // Create a new table row
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${name}</td>
+                <td>${age}</td>
+                <td>${subject}</td>
+                <td>${place}</td>
+                <td><button onclick="status(this)">Completed</button></td>
+                <td><button onclick="editRow(this)">Edit</button> <button onclick="deleteRow(this)">Delete</button></td>
+            `
+            
+
+         
+            const table = document.createElement('table');
+            table.appendChild(newRow);
+
+        
+            tableContainer.innerHTML = '';
+            tableContainer.appendChild(table);
+            dataForm.reset();
+        })
+        function status(button){
+            var row=button.parentElement.parentElement
+            var cells=row.addEventListener('click')
+        }
+
+
+
+ // Function to edit a row
+ function editRow(button) {
+            const row = button.parentElement.parentElement;
+            const cells = row.querySelectorAll('td');
+
+            // Populate form fields with the row data
+            document.getElementById('name').value = cells[0].textContent;
+            document.getElementById('email').value = cells[1].textContent;
+            document.getElementById('age').value = cells[2].textContent;
+
+            // Remove the edited row
+            row.remove();
+        }
+        
+
+        // Function to delete a row
+        function deleteRow(button) {
+            button.parentElement.parentElement.remove();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add and Remove Items</title>
+</head>
+<body>
+    <h2>List of Items</h2>
+    <ul id="itemList">
+        <!-- List items will be dynamically added here -->
+    </ul>
+
+    <button id="addItemBtn">Add Item</button>
+
+    <script>
+        // Function to add a new item to the list
+        function addItem() {
+            const itemList = document.getElementById('itemList');
+            const newItem = document.createElement('li');
+            newItem.innerHTML = `
+                Item ${itemList.children.length + 1}
+                <button onclick="removeItem(this)">Remove</button>
+            `;
+            itemList.appendChild(newItem);
+        }
+
+        // Function to remove the corresponding item
+        function removeItem(button) {
+            const itemList = document.getElementById('itemList');
+            const listItem = button.parentElement;
+            itemList.removeChild(listItem);
+        }
+
+        // Add a click event listener to the "Add Item" button
+        const addItemBtn = document.getElementById('addItemBtn');
+        addItemBtn.addEventListener('click', addItem);
+    </script>
+</body>
+</html>

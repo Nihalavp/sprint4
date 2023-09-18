@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function updateArray(arr) {
+    const n = arr.length;
+
+    if (n <= 1) {
+        return arr; // Nothing to update for arrays with 0 or 1 elements
+    }
+
+    // Update the first element
+    arr[0] = arr[0] * arr[1];
+
+    // Update the last element
+    arr[n - 1] = arr[n - 1] * arr[n - 2];
+
+    // Update the middle elements
+    for (let i = 1; i < n - 1; i++) {
+        arr[i] = arr[i - 1] * arr[i + 1];
+    }
+
+    return arr;
+}
+
+const inputArray = [2, 3, 4, 5, 6];
+const updatedArray = updateArray(inputArray);
+
+console.log("Updated array:", updatedArray);
+
+    </script>
+</body>
+</html>

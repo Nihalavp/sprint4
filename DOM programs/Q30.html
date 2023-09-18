@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Currency Converter</title>
+</head>
+<body>
+    <h2>Currency Converter</h2>
+    <input type="number" id="amount" placeholder="Amount">
+    <select id="fromCurrency">
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+        <option value="gbp">GBP</option>
+    </select>
+    <select id="toCurrency">
+        <option value="usd">USD</option>
+        <option value="eur">EUR</option>
+        <option value="gbp">GBP</option>
+    </select>
+    <button id="convertButton">Convert</button>
+    <p id="result"></p>
+
+    <script>
+        const convertButton = document.getElementById('convertButton');
+        const amountInput = document.getElementById('amount');
+        const fromCurrency = document.getElementById('fromCurrency');
+        const toCurrency = document.getElementById('toCurrency');
+        const resultElement = document.getElementById('result');
+
+        convertButton.addEventListener('click', () => {
+            const amount = parseFloat(amountInput.value);
+            const exchangeRate = {
+                usd: 1.0,
+                eur: 0.85,
+                gbp: 0.74,
+            };
+
+            const convertedAmount = (amount / exchangeRate[fromCurrency.value]) * exchangeRate[toCurrency.value];
+            resultElement.textContent = `${amount} ${fromCurrency.value} is approximately ${convertedAmount.toFixed(2)} ${toCurrency.value}`;
+        });
+    </script>
+</body>
+</html>

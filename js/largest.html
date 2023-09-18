@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+   // This is a function that takes a number as input and finds the largest digit in it.
+function findLargestDigit(num) {
+  // Check if the input number is negative. If so, return an error message.
+  if (num < 0) {
+    return "Please provide a valid non-negative number";
+  }
+
+  // Convert the number to a string so that we can iterate over its digits.
+  const numString = num.toString();
+
+  // Initialize a variable to keep track of the largest digit found.
+  let largestDigit = -Infinity;
+
+  // Loop through each character (digit) in the string representation of the number.
+  for (let i = 0; i < numString.length; i++) {
+    // Convert the character back to a number using parseInt.
+    const digit = parseInt(numString[i]);
+
+    // Compare the current digit with the largest digit found so far.
+    // If the current digit is larger, update the largestDigit variable.
+    if (digit > largestDigit) {
+      largestDigit = digit;
+    }
+  }
+
+  // After iterating through all digits, return the largest digit found.
+  return largestDigit;
+}
+
+// Input number for which we want to find the largest digit.
+const inputNumber = 468;
+
+// Call the findLargestDigit function with the inputNumber.
+const largestDigit = findLargestDigit(inputNumber);
+
+// Print the result.
+console.log(`The largest digit in ${inputNumber} is ${largestDigit}.`);
+
+</script>
+        
+       
+    
+</body>
+</html>

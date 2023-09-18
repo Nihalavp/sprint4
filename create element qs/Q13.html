@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Odd-Numbered List Items</title>
+</head>
+<body>
+    <ol>
+        <li class="odd">Item 1</li>
+        <li>Item 2</li>
+        <li class="odd">Item 3</li>
+        <li>Item 4</li>
+        <li class="odd">Item 5</li>
+        <li>Item 6</li>
+        <li class="odd">Item 7</li>
+        <li>Item 8</li>
+        <li class="odd">Item 9</li>
+        <li>Item 10</li>
+    </ol>
+
+    <script>
+        const oddListItems = document.querySelectorAll('.odd');
+        oddListItems.forEach(item => {
+            item.style.backgroundColor = 'lightgray';
+        });
+    </script>
+</body>
+</html>

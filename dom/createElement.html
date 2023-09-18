@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Div to Container</title>
+</head>
+<body>
+    <!-- Existing div with the ID "container" -->
+    <div id="container">
+        <!-- Existing content inside the container -->
+        <p>Existing content</p>
+    </div>
+
+    <script>
+        // Create a new div element
+        const newDiv = document.createElement('div');
+
+        // Set the text content of the new div
+        newDiv.textContent = 'This is the new div with text content.';
+
+        // Get a reference to the container div by its ID
+        const containerDiv = document.getElementById('container');
+
+        // Append the new div to the container
+        containerDiv.appendChild(newDiv);
+    </script>
+</body>
+</html>

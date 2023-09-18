@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+        <label for="signupUsername">Username:</label>
+        <input type="text" id="signupUsername" required><br>
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" required><br>
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" required><br>
+        <label for="loginPassword">Password:</label>
+        <input type="password" id="loginPassword" required><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            const signupUsername = document.getElementById("signupUsername").value;
+            const signupPassword = document.getElementById("signupPassword").value;
+
+            // Check if the username already exists in local storage
+            if (localStorage.getItem(signupUsername)) {
+                alert("Username already exists. Please choose another.");
+                return;
+            }
+
+            // Store the username and password in local storage
+            localStorage.setItem(signupUsername, signupPassword);
+
+            // Clear input fields
+            document.getElementById("signupUsername").value = "";
+            document.getElementById("signupPassword").value = "";
+
+            alert("Account created successfully. You can now log in.");
+        });
+
+        document.getElementById("loginForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            const loginUsername = document.getElementById("loginUsername").value;
+            const loginPassword = document.getElementById("loginPassword").value;
+
+            // Retrieve the stored password for the entered username
+            const storedPassword = localStorage.getItem(loginUsername);
+
+            if (storedPassword === null) {
+                // Username doesn't exist in local storage
+                displayMessage("Login failed. Please check your credentials.");
+            } else if (loginPassword === storedPassword) {
+                // Passwords match, login successful
+                displayMessage("Login successful.");
+            } else {
+                // Passwords don't match
+                displayMessage("Login failed. Please check your credentials.");
+            }
+
+            // Clear input fields
+            document.getElementById("loginUsername").value = "";
+            document.getElementById("loginPassword").value = "";
+        });
+
+        function displayMessage(message) {
+            const messageDiv = document.getElementById("message");
+            messageDiv.textContent = message;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findNextLeapYears(startYear, numYears) {
+    const leapYears = [];
+    while (leapYears.length < numYears) {
+        if ((startYear % 4 === 0 && startYear % 100 !== 0) || startYear % 400 === 0) {
+            leapYears.push(startYear);
+        }
+        startYear++;
+    }
+    return leapYears;
+}
+
+const currentYear = new Date().getFullYear();
+const nextLeapYears = findNextLeapYears(currentYear + 1, 20);
+console.log("The next 20 leap years are:", nextLeapYears);
+
+    </script>
+</body>
+</html>

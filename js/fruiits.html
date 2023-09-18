@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var no_fruits=prompt("enter no.of fruits")
+   fruits=[[],[]]
+// fruits[0]=[]
+// fruits[1]=[]
+document.write('<table border=1><tr><th>fruits</th><th>price</th></tr>')
+   
+for(i=0;i<no_fruits;i++){
+ fruits[0][i]=prompt("enter fruits name")
+   fruits[1][i]=Number(prompt("enter fruits price"))
+ 
+//   document.write("<tr><td>",fruits[0][i],"</td><td>",fruits[1][i],"</td></tr>")
+}
+  sum=0
+  for(i=0;i<no_fruits;i++){
+    document.write("<tr><td>",fruits[0][i],"</td><td>",fruits[1][i],"</td></tr>")
+    sum=sum+fruits[1][i]
+  }
+   document.write("<tr><td>Total</td><td>"+sum+"</td></tr>")
+   document.write("</table>")
+   
+
+   
+
+
+console.log(fruits)
+</script></body>
+</html>

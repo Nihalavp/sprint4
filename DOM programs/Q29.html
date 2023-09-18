@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Copy to Clipboard</title>
+</head>
+<body>
+    <input type="text" id="textToCopy" value="Text to Copy">
+    <button id="copyButton">Copy to Clipboard</button>
+
+    <script>
+        const textToCopy = document.getElementById('textToCopy');
+        const copyButton = document.getElementById('copyButton');
+
+        copyButton.addEventListener('click', () => {
+            textToCopy.select();
+            document.execCommand('copy');
+        });
+    </script>
+</body>
+</html>

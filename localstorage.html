@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<body>
+    <h2>Login Form</h2>
+
+    <div id="formContainer"></div>
+
+    <script>
+       
+        var loginForm = document.createElement("form");
+        loginForm.id = "loginForm";
+
+        var usernameLabel = document.createElement("label");
+        usernameLabel.textContent = "Username:";
+        usernameLabel.setAttribute("for", "username");
+
+        
+        var usernameInput = document.createElement("input");
+        usernameInput.type = "text";
+        usernameInput.id = "username";
+        usernameInput.name = "username";
+        usernameInput.required = true;
+
+        const br1 = document.createElement("br");
+
+ 
+        const passwordLabel = document.createElement("label");
+        passwordLabel.textContent = "Password:";
+        passwordLabel.setAttribute("for", "password");
+
+     
+        const passwordInput = document.createElement("input");
+        passwordInput.type = "password";
+        passwordInput.id = "password";
+        passwordInput.name = "password";
+        passwordInput.required = true;
+
+    
+        const br2 = document.createElement("br");
+
+        
+        const submitButton = document.createElement("button");
+        submitButton.type = "submit";
+        submitButton.textContent = "Submit";
+        submitButton.id="submitt"
+
+    
+        loginForm.appendChild(usernameLabel);
+        loginForm.appendChild(usernameInput);
+        loginForm.appendChild(br1);
+        loginForm.appendChild(passwordLabel);
+        loginForm.appendChild(passwordInput);
+        loginForm.appendChild(br2);
+        loginForm.appendChild(submitButton);
+
+     
+        const formContainer = document.getElementById("formContainer");
+        formContainer.appendChild(loginForm);
+
+
+        loginForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            function send(){
+   
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            var signup=JSON.parse(localStorage.getItem('signup')) ||[]
+
+console.log(signup)
+        
+
+        
+
+            const signupp={
+               name: username.value,
+               age: password.value
+            }
+            signup.push(signupp)
+            localStorage.setItem("signup",JSON.stringify(signup))
+            
+            
+    
+            // document.getElementById("username").value = "";
+            // document.getElementById("password").value = "";
+
+        }
+        submitButton.addEventListener('submit',send)
+
+        });
+    </script>
+</body>
+</html>

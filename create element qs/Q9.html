@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Input Text</title>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Enter text">
+    <button id="submitButton">Submit</button>
+
+    <script>
+        const textInput = document.getElementById('textInput');
+        const submitButton = document.getElementById('submitButton');
+
+        submitButton.addEventListener('click', () => {
+            const enteredText = textInput.value;
+            alert(enteredText);
+        });
+    </script>
+</body>
+</html>

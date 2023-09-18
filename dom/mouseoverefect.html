@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae doloremque mollitia illo labore praesentium vitae,
+                soluta deserunt fugiat error ab. Ducimus sed, quidem doloremque
+                non perspiciatis sint error odit eum!</p>
+
+        </div>
+        <script>
+            var paragraph = document.getElementById('para')
+            paragraph.addEventListener('mouseover',mouseOver)
+            
+                function mouseOver(){
+                    paragraph.style.backgroundColor='yellow'
+                }
+                function mouseOut(){
+                    paragraph.style.backgroundColor='red'
+
+                }
+                
+            
+                paragraph.addEventListener('mouseout',mouseOut)
+
+            
+        </script>
+    </body>
+</html>
